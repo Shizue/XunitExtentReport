@@ -1,2 +1,4 @@
 # XunitExtentReport
-XunitExtentReport
+Xunit
+
+ExtentReport
