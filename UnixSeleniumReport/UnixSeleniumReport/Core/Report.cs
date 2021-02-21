@@ -39,18 +39,18 @@ namespace UnixSeleniumReport.Core
             extent.AddSystemInfo("Host Name", "SoftwareTestingMaterial");
             extent.AddSystemInfo("Environment", "Production");
             extent.AddSystemInfo("User Name", "Flávia Shizue");
-            htmlReporter.Config.DocumentTitle ="Title of the Report Comes here ";
-            htmlReporter.Config.ReportName="Name of the Report Comes here ";
-            htmlReporter.Config.Theme= Theme.Dark;
+            htmlReporter.Config.DocumentTitle = "Title of the Report Comes here ";
+            htmlReporter.Config.ReportName = "Name of the Report Comes here ";
+            htmlReporter.Config.Theme = Theme.Dark;
             test = extent.CreateTest("First one").Info("Test Started");
         }
 
-        public void GetResult(Status status, string name, Exception exception, string dirPathScreenPath)
+        public void GetResult(Status status, string name, string dirPathScreenPath)
         {
             if (status == Status.Fail)
             {
                 test.Log(Status.Fail, MarkupHelper.CreateLabel(name + " - Test Case Failed", ExtentColor.Red));
-                test.Log(Status.Fail, MarkupHelper.CreateLabel(exception.Message + " - Test Case Failed", ExtentColor.Red));
+                test.Log(Status.Fail, MarkupHelper.CreateLabel(name + " - Test Case Failed", ExtentColor.Red));
                 test.Fail("Test Case Failed Snapshot is below " + test.AddScreenCaptureFromPath(dirPathScreenPath));
             }
             else if (status == Status.Skip)
@@ -63,7 +63,7 @@ namespace UnixSeleniumReport.Core
                 test.AddScreenCaptureFromPath(dirPathScreenPath);
                 test.Log(Status.Pass, MarkupHelper.CreateLabel(name + " Test Case PASSED", ExtentColor.Green));
             }
-           
+
         }
 
         public void Endreport()

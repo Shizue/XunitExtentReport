@@ -11,7 +11,7 @@ using Xunit.Abstractions;
 
 namespace UnixSeleniumReport
 {
-    public class PageFiledsTest : XunitContextBase
+    public class PageFiledsTest
     {
         [ThreadStatic]
         private static Report report;
@@ -22,7 +22,7 @@ namespace UnixSeleniumReport
         [ThreadStatic]
         IWebDriver driver = new ChromeDriver();
 
-        public PageFiledsTest(ITestOutputHelper output) : base(output)
+        public PageFiledsTest()
         {
             report = new Report(driver);
             getScreenShot = new GetScreenShot(driver);
@@ -40,7 +40,7 @@ namespace UnixSeleniumReport
                 Thread.Sleep(2500);
                 getScreenShot.Capture("testContext");
                 Assert.True(true, "Passed");
-                report.GetResult(Status.Pass, report.htmlReporter.Config.ReportName, Context.Exception, getScreenShot.dirPath.ToString());
+                report.GetResult(Status.Pass, report.htmlReporter.Config.ReportName, getScreenShot.dirPath.ToString());
                 //Assert.False(true, "Failed");
             }
             catch (Exception)
@@ -51,26 +51,6 @@ namespace UnixSeleniumReport
             {
                 report.Endreport();
             }
-        }
-
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-
-        public override void Dispose()
-        {
-            base.Dispose();
         }
     }
 }

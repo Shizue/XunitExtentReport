@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shizue\\source\\repos\\UnixSeleniumReport\\UnixSeleniumReport\\UnixSeleniumReport.csproj": {}
+    "C:\\Users\\shizue\\Source\\Repos\\XunitExtentReport\\UnixSeleniumReport\\UnixSeleniumReport\\UnixSeleniumReport.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shizue\\source\\repos\\UnixSeleniumReport\\UnixSeleniumReport\\UnixSeleniumReport.csproj": {
+    "C:\\Users\\shizue\\Source\\Repos\\XunitExtentReport\\UnixSeleniumReport\\UnixSeleniumReport\\UnixSeleniumReport.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shizue\\source\\repos\\UnixSeleniumReport\\UnixSeleniumReport\\UnixSeleniumReport.csproj",
+        "projectUniqueName": "C:\\Users\\shizue\\Source\\Repos\\XunitExtentReport\\UnixSeleniumReport\\UnixSeleniumReport\\UnixSeleniumReport.csproj",
         "projectName": "UnixSeleniumReport",
-        "projectPath": "C:\\Users\\shizue\\source\\repos\\UnixSeleniumReport\\UnixSeleniumReport\\UnixSeleniumReport.csproj",
+        "projectPath": "C:\\Users\\shizue\\Source\\Repos\\XunitExtentReport\\UnixSeleniumReport\\UnixSeleniumReport\\UnixSeleniumReport.csproj",
         "packagesPath": "C:\\Users\\shizue\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shizue\\source\\repos\\UnixSeleniumReport\\UnixSeleniumReport\\obj\\",
+        "outputPath": "C:\\Users\\shizue\\Source\\Repos\\XunitExtentReport\\UnixSeleniumReport\\UnixSeleniumReport\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
